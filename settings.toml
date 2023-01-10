@@ -1,0 +1,24 @@
+[discord]
+token = "42069"
+application_id = 740618936881512448
+guild_id = 680820132016160821
+admin_channel_id = 818753943642964011
+
+[cleaning]
+  image_cdn_allowlist = [ 
+     "instagram.com",
+     "imgur.com",
+     "cdn.discordapp.com",
+     "media.jipvankuijk.nl",
+  ]
+
+[[channel]]
+  id = 810536807761707121 
+  keep_images = false
+  max_message_age_in_h = 12
+
+[[channel]]
+  id = 818753943642964011 
+  keep_images = true
+  max_message_age_in_h = 12
+
