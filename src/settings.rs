@@ -11,7 +11,6 @@ pub struct Settings {
 #[derive(Debug, Deserialize, Clone)]
 pub struct Discord {
     pub token: String,
-    pub application_id: u64,
     pub guild_id: u32,
     pub admin_channel_id: u64,
 }
