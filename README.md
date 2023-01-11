@@ -1,5 +1,6 @@
 # discord_channel_cleaner
 Simple software to delete messages in discord channels after a certain amount of time.
+Its possible to keep images and only delete text messages.
 
 ## Installation
 via cargo:
