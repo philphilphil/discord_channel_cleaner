@@ -2,6 +2,14 @@
 name = "discord_channel_cleaner"
 version = "0.1.0"
 edition = "2021"
+authors = ["Phil Baum <phil@phib.io>"]
+license = "MIT"
+description = "Delete messages in discord channels."
+readme = "README.md"
+homepage = "https://github.com/philphilphil/discord_channel_cleaner"
+repository = "https://github.com/philphilphil/discord_channel_cleaner"
+keywords = ["discord"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 tracing = "0.1.37"

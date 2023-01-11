@@ -1,5 +1,5 @@
 [discord]
-token = "NjYyMjA1MzQ3MzQzMjM3MTIx.GYUle5.ZEQsLeJg_gAtTvQH3wnISPjkUC2IC6strmor-I"
+token = "your_token"
 guild_id = 810536807761707118
 admin_channel_id = 818753943642964011
 
@@ -15,11 +15,11 @@ admin_channel_id = 818753943642964011
   #channel2
   id = 1062789397893881956 
   keep_images = false
-  max_message_age_in_h = 1
+  max_message_age_in_h = 12
 
 [[channel]]
   #general
   id = 810536807761707121 
   keep_images = true
-  max_message_age_in_h = 0
+  max_message_age_in_h = 1
 
