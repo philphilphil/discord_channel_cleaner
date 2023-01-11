@@ -14,7 +14,8 @@ tbd
 ## Usage
 ### Start
 Simply call `discord_channel_cleaner`.
-The configuration file `settings.toml` has to be in the cwd.
+If the `settings.toml` is not in the cwd, the path can be given as an argument: `discord_channel_cleaner /home/phil/chan_clean_conf.toml`.
+
 ### Setup
 You need to register a Discord application with a bot.
 The required gateway intents are "Read Messages/View Channels", "Read Message History", "Send Messages" and "Manage Messages".
