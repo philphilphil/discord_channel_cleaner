@@ -1,6 +1,9 @@
 # discord_channel_cleaner
 Simple software to delete messages in discord channels after a certain amount of time.
-Its possible to keep images and only delete text messages.
+It was created for photography gallery channels to delete text messages that are x hours old but keep images.
+
+If `keep_images` is set to true, messages with attachments (images) and links from the configured allow list are not deleted.
+If false, all messages get deleted.
 
 ## Installation
 via cargo:
