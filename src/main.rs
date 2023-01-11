@@ -1,10 +1,8 @@
 mod clean_channel;
 mod settings;
-mod utilities;
 
 use config::Config;
-use settings::Settings;
-use tracing::{info, Level};
+use tracing::Level;
 use tracing_subscriber::FmtSubscriber;
 
 #[tokio::main]
@@ -16,16 +14,14 @@ async fn main() {
 
     tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
-    info!("Loading configuration..");
-
-    let mut config = Config::builder()
+    let settings = Config::builder()
         .add_source(config::File::with_name("settings.toml"))
         .build()
-        .expect("Issue building configuration.");
+        .expect("Issue building configuration.")
+        .try_deserialize()
+        .expect("Issue parsing configuration.");
 
-    let settings: Settings = config.try_deserialize().unwrap();
-
-    clean_channel::execute(settings).await;
-
-    info!("asd");
+    clean_channel::execute(settings)
+        .await
+        .expect("Error cleaning.");
 }

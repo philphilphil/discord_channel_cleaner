@@ -1,7 +1,7 @@
 [discord]
 token = "42069"
-application_id = 740618936881512448
-guild_id = 680820132016160821
+application_id = 662205347343237121
+guild_id = 810536807761707118
 admin_channel_id = 818753943642964011
 
 [cleaning]
@@ -13,12 +13,14 @@ admin_channel_id = 818753943642964011
   ]
 
 [[channel]]
-  id = 810536807761707121 
+  #channel2
+  id = 1062789397893881956 
   keep_images = false
-  max_message_age_in_h = 12
+  max_message_age_in_h = 1
 
 [[channel]]
-  id = 818753943642964011 
+  #general
+  id = 810536807761707121 
   keep_images = true
-  max_message_age_in_h = 12
+  max_message_age_in_h = 0
 
