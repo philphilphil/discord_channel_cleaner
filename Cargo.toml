@@ -1,10 +1,10 @@
 [package]
 name = "discord_channel_cleaner"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Phil Baum <phil@phib.io>"]
 license = "MIT"
-description = "Delete messages in discord channels."
+description = "Deletes messages (optional keep images) in discord channels. "
 readme = "README.md"
 homepage = "https://github.com/philphilphil/discord_channel_cleaner"
 repository = "https://github.com/philphilphil/discord_channel_cleaner"

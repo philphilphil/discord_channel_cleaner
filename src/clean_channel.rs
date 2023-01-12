@@ -11,12 +11,9 @@ use tracing::{error, info};
 use crate::settings::{Channel, Settings};
 
 pub async fn execute(settings: Settings) -> Result<()> {
-    // connect to api and clean
-    info!("Starting clean job.");
+    info!("Start cleaning {} channels.", settings.channels.len());
     let intents = GatewayIntents::all();
-
     let admin_channel = ChannelId(settings.discord.admin_channel_id);
-
     let client = Client::builder(settings.discord.token, intents)
         .await
         .expect("Err creating client");
@@ -37,7 +34,11 @@ pub async fn execute(settings: Settings) -> Result<()> {
 
         let delete_count_msg = build_delete_count_msg(channel_name, purge_count, media_kept_count);
 
-        admin_channel.say(ctx, &delete_count_msg).await.unwrap();
+        admin_channel
+            .say(ctx, &delete_count_msg)
+            .await
+            .expect("Error sending message to admin channel.");
+
         info!("{}", &delete_count_msg);
     }
 

@@ -1,12 +1,12 @@
 # Builder
 FROM rust:latest AS builder
 RUN update-ca-certificates
-WORKDIR /gallery_cleaner
+WORKDIR /discord_channel_cleaner
 COPY ./ .
 RUN cargo build --release
 
 # Image
 FROM ubuntu:latest
-WORKDIR /gallery_cleaner
-COPY --from=builder /gallery_cleaner/target/release/gallery_cleaner ./
-CMD ["/gallery_cleaner/gallery_cleaner"]
+WORKDIR /dcc
+COPY --from=builder /discord_channel_cleaner/target/release/discord_channel_cleaner ./
+CMD ["/dcc/discord_channel_cleaner"]
